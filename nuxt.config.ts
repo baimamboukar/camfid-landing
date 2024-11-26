@@ -1,66 +1,74 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
-
+  extends: ["@nuxt/ui-pro"],
   modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxthq/studio',
-    '@vueuse/nuxt',
-    'nuxt-og-image'
+    "@nuxt/content",
+    "@nuxt/eslint",
+    "@nuxt/fonts",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxthq/studio",
+    "@vueuse/nuxt",
+    "nuxt-og-image",
   ],
 
-  hooks: {
-    // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
-    'components:extend': (components) => {
-      const globals = components.filter(c => ['UButton'].includes(c.pascalName))
-
-      globals.forEach(c => c.global = true)
-    }
+  devtools: {
+    enabled: true,
   },
 
   colorMode: {
-    disableTransition: true
-  },
-
-  nitro: {
-    prerender: {
-      routes: [
-        '/',
-        '/docs'
-      ],
-      crawlLinks: true
-    }
+    disableTransition: false,
   },
 
   routeRules: {
-    '/api/search.json': { prerender: true },
-    '/docs': { redirect: '/docs/getting-started', prerender: false }
-  },
-
-  devtools: {
-    enabled: true
-  },
-
-  typescript: {
-    strict: false
+    "/api/search.json": { prerender: true },
+    "/docs": { redirect: "/docs/getting-started", prerender: false },
   },
 
   future: {
-    compatibilityVersion: 4
+    compatibilityVersion: 4,
+  },
+
+  compatibilityDate: "2024-07-11",
+
+  nitro: {
+    prerender: {
+      routes: ["/", "/docs"],
+      crawlLinks: true,
+    },
+  },
+
+  typescript: {
+    strict: false,
+  },
+
+  hooks: {
+    // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
+    "components:extend": (components) => {
+      const globals = components.filter((c) =>
+        ["UButton"].includes(c.pascalName)
+      );
+
+      globals.forEach((c) => (c.global = true));
+    },
   },
 
   eslint: {
     config: {
       stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
+        commaDangle: "never",
+        braceStyle: "1tbs",
+      },
+    },
   },
-
-  compatibilityDate: '2024-07-11'
-})
+  fonts: {
+    families: [
+      // do not resolve this font with any provider from `@nuxt/fonts`
+      { name: "Exo 2", provider: "google" },
+      { name: "Open Sans", provider: "google" },
+      // only resolve this font with the `google` provider
+      { name: "Space Grotesk", provider: "google" },
+      // specify specific font data - this will bypass any providers
+    ],
+  },
+});
