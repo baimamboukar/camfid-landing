@@ -2,7 +2,7 @@
 const colorMode = useColorMode();
 
 const color = computed(() =>
-  colorMode.value === "dark" ? "#111827" : "white"
+  colorMode.value === "dark" ? "#111827" : "#FEF9F2"
 );
 
 useHead({
@@ -18,9 +18,7 @@ useHead({
 });
 
 useSeoMeta({
-  titleTemplate: "%s - Nuxt UI Pro - SaaS template",
-  ogImage: "https://saas-template.nuxt.dev/social-card.png",
-  twitterImage: "https://saas-template.nuxt.dev/social-card.png",
+  titleTemplate: "%s - Camfid Engineering",
   twitterCard: "summary_large_image",
 });
 </script>

@@ -18,6 +18,7 @@ export default defineNuxtConfig({
 
   colorMode: {
     disableTransition: false,
+    preference: "light",
   },
 
   routeRules: {
@@ -66,6 +67,7 @@ export default defineNuxtConfig({
       // do not resolve this font with any provider from `@nuxt/fonts`
       { name: "Exo 2", provider: "google" },
       { name: "Open Sans", provider: "google" },
+      { name: "Futura", provider: "google" },
       // only resolve this font with the `google` provider
       { name: "Space Grotesk", provider: "google" },
       // specify specific font data - this will bypass any providers

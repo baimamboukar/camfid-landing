@@ -1,16 +1,22 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
+const { data: page } = await useAsyncData("index", () =>
+  queryContent("/").findOne()
+);
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Page not found",
+    fatal: true,
+  });
 }
 
 useSeoMeta({
-  titleTemplate: '',
+  titleTemplate: "",
   title: page.value.title,
   ogTitle: page.value.title,
   description: page.value.description,
-  ogDescription: page.value.description
-})
+  ogDescription: page.value.description,
+});
 </script>
 
 <template>
@@ -20,7 +26,9 @@ useSeoMeta({
       :description="page.hero.description"
       :links="page.hero.links"
     >
-      <div class="absolute inset-0 landing-grid z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" />
+      <div
+        class="absolute inset-0 dotted-grid z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+      />
 
       <template #headline>
         <UBadge
@@ -35,10 +43,7 @@ useSeoMeta({
             class="focus:outline-none"
             tabindex="-1"
           >
-            <span
-              class="absolute inset-0"
-              aria-hidden="true"
-            />
+            <span class="absolute inset-0" aria-hidden="true" />
           </NuxtLink>
 
           {{ page.hero.headline.label }}
@@ -111,15 +116,29 @@ useSeoMeta({
 <style scoped>
 .landing-grid {
   background-size: 100px 100px;
-  background-image:
-    linear-gradient(to right, rgb(var(--color-gray-200)) 1px, transparent 1px),
+  background-image: linear-gradient(
+      to right,
+      rgb(var(--color-gray-200)) 1px,
+      transparent 1px
+    ),
     linear-gradient(to bottom, rgb(var(--color-gray-200)) 1px, transparent 1px);
 }
 .dark {
   .landing-grid {
-    background-image:
-      linear-gradient(to right, rgb(var(--color-gray-800)) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(var(--color-gray-800)) 1px, transparent 1px);
+    background-image: linear-gradient(
+        to right,
+        rgb(var(--color-gray-800)) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgb(var(--color-gray-800)) 1px,
+        transparent 1px
+      );
+  }
+  .dotted-grid {
+    background-size: 50px 50px;
+    background-image: radial-gradient(circle, #87ceeb 1px, transparent 1px);
   }
 }
 </style>
