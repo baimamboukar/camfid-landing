@@ -1,29 +1,32 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('pricing', () => queryContent('/pricing').findOne())
+const { data: page } = await useAsyncData("pricing", () =>
+  queryContent("/pricing").findOne()
+);
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Page not found",
+    fatal: true,
+  });
 }
 
 useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title,
   description: page.value.description,
-  ogDescription: page.value.description
-})
+  ogDescription: page.value.description,
+});
 
-defineOgImageComponent('Saas')
+defineOgImageComponent("Saas");
 
-const isYearly = ref(false)
+const isYearly = ref(false);
 </script>
 
 <template>
   <div v-if="page">
     <UPageHero v-bind="page.hero">
       <template #links>
-        <UPricingToggle
-          v-model="isYearly"
-          class="w-48"
-        />
+        <UPricingToggle v-model="isYearly" class="w-48" />
       </template>
     </UPageHero>
 

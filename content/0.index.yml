@@ -12,7 +12,7 @@ hero:
     - label: Commencer à Recycler
       to: '/services'
       size: xl
-      color: black
+      color: primary
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
     - label: Rejoignez Notre Mission
@@ -109,5 +109,5 @@ cta:
   links:
     - label: Contactez-Nous
       size: xl
-      color: black
+      color: primary
       to: "tel:+33676332863"
