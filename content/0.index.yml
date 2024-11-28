@@ -3,8 +3,8 @@ description: Transformez les déchets en ressources précieuses grâce à nos so
 navigation: false
 
 hero:
-  title: Moins de déchets, plus de possibilité
-  description: Rejoignez-nous dans la transformation des déchets plastiques en produits recyclés de haute qualité pour un avenir durable
+  title: Moins de déchets, plus de possibilités!
+  description: Rejoignez-nous dans la transformation des déchets plastiques en produits recyclés de haute qualité pour un avenir durable.
   headline:
     label: Solutions Durables
     icon: i-heroicons-leaf
@@ -45,7 +45,7 @@ sections:
         size: md
         class: ml-8
 
-  - title: Nos Produits
+  - title: Nos Produits 
     description: Des granulés recyclés aux produits finis
     align: right
     features:
@@ -95,6 +95,27 @@ testimonials:
   title: Notre Impact dans la Communauté
   description: Découvrez comment nos initiatives de recyclage transforment les vies
   items:
+    - quote: Ensemble, nous transformons les déchets en opportunités et contribuons à un avenir plus durable pour notre planète !
+      author:
+        name: Équipe CAMFID
+        description: Champions de l'Environnement
+        avatar:
+          src: /images/team.jpg
+          loading: lazy
+    - quote: Ensemble, nous transformons les déchets en opportunités et contribuons à un avenir plus durable pour notre planète !
+      author:
+        name: Équipe CAMFID
+        description: Champions de l'Environnement
+        avatar:
+          src: /images/team.jpg
+          loading: lazy
+    - quote: Ensemble, nous transformons les déchets en opportunités et contribuons à un avenir plus durable pour notre planète !
+      author:
+        name: Équipe CAMFID
+        description: Champions de l'Environnement
+        avatar:
+          src: /images/team.jpg
+          loading: lazy
     - quote: Ensemble, nous transformons les déchets en opportunités et contribuons à un avenir plus durable pour notre planète !
       author:
         name: Équipe CAMFID

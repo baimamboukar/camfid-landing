@@ -62,6 +62,7 @@ useSeoMeta({
     </ULandingSection>
 
     <ULandingSection
+      class="!pt-0"
       v-for="(section, index) in page.sections"
       :key="index"
       :title="section.title"
@@ -89,6 +90,7 @@ useSeoMeta({
       :headline="page.testimonials.headline"
       :title="page.testimonials.title"
       :description="page.testimonials.description"
+      class="!pt - 0"
     >
       <UPageColumns class="xl:columns-4">
         <div

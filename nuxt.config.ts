@@ -65,7 +65,7 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       // do not resolve this font with any provider from `@nuxt/fonts`
-      { name: "Exo 2", provider: "google" },
+      { name: "Montserrat", provider: "google" },
       { name: "Open Sans", provider: "google" },
       { name: "Futura", provider: "google" },
       // only resolve this font with the `google` provider

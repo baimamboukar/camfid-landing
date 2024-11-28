@@ -26,7 +26,9 @@ const links = [
 
 <template>
   <UHeader :links="links">
-    <template #logo> CAMFID Engineering </template>
+    <template #logo>
+      <b class="text-bold text-camfid-primary-300">CAMFID</b> Engineering
+    </template>
 
     <template #right>
       <UButton label="Sign in" color="gray" to="/login" />
