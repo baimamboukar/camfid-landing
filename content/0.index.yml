@@ -10,7 +10,7 @@ hero:
     icon: i-heroicons-leaf
   links:
     - label: Commencer à Recycler
-      to: '/services'
+      to: '#'
       size: xl
       color: primary
       icon: i-heroicons-arrow-right-20-solid
@@ -19,7 +19,7 @@ hero:
       icon: i-heroicons-globe-alt
       size: xl
       color: gray
-      to: "/contact"
+      to: "#"
 
 sections:
   - title: Nos Solutions de Recyclage
@@ -38,7 +38,7 @@ sections:
         icon: i-heroicons-building-factory
     links:
       - label: En Savoir Plus
-        to: /services
+        to: #
         color: gray
         icon: i-heroicons-arrow-right-20-solid
         trailing: true
