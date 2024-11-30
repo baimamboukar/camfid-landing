@@ -26,6 +26,7 @@ sections:
     description: Services professionnels de recyclage pour PVC, PET, PEHD et PP
     id: services
     align: left
+    image: /images/clustered.jpg
     features:
       - name: Collecte de Plastique
         description: Collecte efficace auprès des ménages, entreprises et institutions
@@ -48,6 +49,7 @@ sections:
   - title: Nos Produits 
     description: Des granulés recyclés aux produits finis
     align: right
+    image: /images/pills.jpg
     features:
       - name: Granulés
         description: Granulés plastiques recyclés de haute qualité

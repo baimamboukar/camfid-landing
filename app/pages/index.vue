@@ -70,7 +70,7 @@ useSeoMeta({
       :align="section.align"
       :features="section.features"
     >
-      <ImagePlaceholder />
+      <ImagePlaceholder :path="section.image" />
     </ULandingSection>
 
     <div class="ml-8 mr-8 mb-10">

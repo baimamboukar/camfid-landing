@@ -37,8 +37,12 @@ const links = [
   },
   {
     label: "Aide & FAQs",
-    to: "/blog",
+    to: "/faq",
     icon: "i-heroicons-question-mark-circle-20-solid",
+  },
+  {
+    label: "Mon Espace",
+    to: "/espace",
   },
 ];
 </script>
