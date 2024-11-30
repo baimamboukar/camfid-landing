@@ -1,47 +1,55 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'auth'
-})
+  layout: "auth",
+});
 
 useSeoMeta({
-  title: 'Sign up'
-})
+  title: "Creer un Compte",
+});
 
-const fields = [{
-  name: 'name',
-  type: 'text',
-  label: 'Name',
-  placeholder: 'Enter your name'
-}, {
-  name: 'email',
-  type: 'email',
-  label: 'Email',
-  placeholder: 'Enter your email'
-}, {
-  name: 'password',
-  label: 'Password',
-  type: 'password',
-  placeholder: 'Enter your password'
-}]
+const fields = [
+  {
+    name: "name",
+    type: "text",
+    label: "Noms",
+    placeholder: "Entez votre nom complet",
+  },
+  {
+    name: "email",
+    type: "email",
+    label: "Email",
+    placeholder: "Entrez votre email",
+  },
+  {
+    name: "password",
+    label: "Mot de Passe",
+    type: "password",
+    placeholder: "Entrez votre Mot de Passe",
+  },
+];
 
 const validate = (state: any) => {
-  const errors = []
-  if (!state.email) errors.push({ path: 'email', message: 'Email is required' })
-  if (!state.password) errors.push({ path: 'password', message: 'Password is required' })
-  return errors
-}
+  const errors = [];
+  if (!state.email)
+    errors.push({ path: "email", message: "Email is required" });
+  if (!state.password)
+    errors.push({ path: "password", message: "Password is required" });
+  return errors;
+};
 
-const providers = [{
-  label: 'Continue with GitHub',
-  icon: 'i-simple-icons-github',
-  color: 'gray' as const,
-  click: () => {
-    console.log('Redirect to GitHub')
-  }
-}]
+const providers = [
+  {
+    label: "Continuer avec Google",
+    icon: "i-simple-icons-google",
+    color: "white" as const,
+    click: () => {
+      console.log("Redirect to Google");
+    },
+  },
+];
 
 function onSubmit(data: any) {
-  console.log('Submitted', data)
+  console.log("Submitted", data);
 }
 </script>
 
@@ -54,23 +62,23 @@ function onSubmit(data: any) {
       :validate="validate"
       :providers="providers"
       align="top"
-      title="Create an account"
+      title="Espace Investisseur"
       :ui="{ base: 'text-center', footer: 'text-center' }"
-      :submit-button="{ label: 'Create account' }"
+      :submit-button="{ label: 'Creer Mon Espace' }"
       @submit="onSubmit"
     >
       <template #description>
-        Already have an account? <NuxtLink
-          to="/login"
-          class="text-primary font-medium"
-        >Login</NuxtLink>.
+        Avez-vous déjà un compte?
+        <NuxtLink to="/login" class="text-primary font-medium"
+          >Acceder a Mon Espace</NuxtLink
+        >.
       </template>
 
       <template #footer>
-        By signing up, you agree to our <NuxtLink
-          to="/"
-          class="text-primary font-medium"
-        >Terms of Service</NuxtLink>.
+        En créant un compte, vous acceptez nos
+        <NuxtLink to="/" class="text-primary font-medium"
+          >Termes de Service</NuxtLink
+        >.
       </template>
     </UAuthForm>
   </UCard>

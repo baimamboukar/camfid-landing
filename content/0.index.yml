@@ -9,7 +9,7 @@ hero:
     label: Solutions Durables
     icon: i-heroicons-leaf
   links:
-    - label: Commencer à Recycler
+    - label: Invester
       to: '#'
       size: xl
       color: primary

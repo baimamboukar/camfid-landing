@@ -3,21 +3,40 @@ import type { NavItem } from "@nuxt/content";
 
 const navigation = inject<Ref<NavItem[]>>("navigation", ref([]));
 
+// const links = [
+//   {
+//     label: "Acceuil",
+//     to: "/docs",
+//   },
+//   {
+//     label: "Notre Solution",
+//     to: "/pricing",
+//   },
+//   {
+//     label: "Pourquoi Investir?",
+//     to: "/blog",
+//   },
+//   {
+//     label: "Aide",
+//     to: "/blog",
+//     icon: "i-heroicons-question-mark-circle-20-solid",
+//   },
+// ];
 const links = [
   {
-    label: "Docs",
-    to: "/docs",
+    label: "Acceuil",
+    to: "/",
   },
   {
-    label: "Notre Solution",
+    label: "Investir",
     to: "/pricing",
   },
   {
-    label: "Pourquoi Investir?",
+    label: "Actualites",
     to: "/blog",
   },
   {
-    label: "Aide",
+    label: "Aide & FAQs",
     to: "/blog",
     icon: "i-heroicons-question-mark-circle-20-solid",
   },
@@ -31,15 +50,15 @@ const links = [
     </template>
 
     <template #right>
-      <UButton label="Sign in" color="gray" to="/login" />
-      <UButton
+      <UButton label="Investir Maintenant" color="primary" to="/signup" />
+      <!-- <UButton
         label="Sign up"
         icon="i-heroicons-arrow-right-20-solid"
         trailing
         color="black"
         to="/signup"
         class="hidden lg:flex"
-      />
+      /> -->
     </template>
 
     <template #panel>

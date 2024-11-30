@@ -58,7 +58,7 @@ useSeoMeta({
     </ULandingHero>
 
     <ULandingSection class="!pt-0">
-      <ImagePlaceholder />
+      <ImagePlaceholder path="/images/pipes.jpg" />
     </ULandingSection>
 
     <ULandingSection
@@ -73,6 +73,9 @@ useSeoMeta({
       <ImagePlaceholder />
     </ULandingSection>
 
+    <div class="ml-8 mr-8 mb-10">
+      <InvestAction />
+    </div>
     <ULandingSection
       :title="page.features.title"
       :description="page.features.description"
