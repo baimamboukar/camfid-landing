@@ -1,0 +1,87 @@
+title: Aide & FAQs
+description: Choose the plan that's right for you.
+navigation.icon: i-heroicons-credit-card
+hero:
+  title: A plan for every need
+  description: Our plans are designed to meet the requirements of both beginners and players. Get the right plan that suits you.
+  align: center
+faq:
+  title: Questions Fréquemment Posées
+  description: Retrouvez ici les réponses aux questions les plus courantes sur notre projet de recyclage des plastiques.
+  items:
+    - label: Quel est l'objectif de CAMFID Engineering recyclage ?
+      content: >
+        L'objectif est de réduire les déchets plastiques et de promouvoir l'utilisation de
+        matériaux recyclés dans la production de produits PVC. CAMFID contribue à valoriser
+        les déchets et à encourager l'usage de plastiques recyclés dans la fabrication.
+      defaultOpen: false
+    - label: Comment puis-je acheter des parts ?
+      content: >
+        Vous pouvez acheter des parts directement sur notre plateforme :
+        - Au Cameroun : Utilisez Orange Money ou MTN Mobile Money et recevez une confirmation immédiate.
+        - À l'étranger : Payez via une passerelle de paiement sécurisée par carte bancaire. Une notification vous confirmera l'achat.
+    - label: Qu’est-ce que je gagne en investissant ?
+      content: >
+        Le montant minimum d'investissement est de 10 000 FCFA par part. Les avantages incluent :
+        - Un retour financier sous forme de dividendes à partir des bénéfices réalisés.
+        - Une implication dans un projet durable qui protège l'environnement.
+        - Une contribution directe à la création de 36 emplois directs et plus de 100 indirects.
+        - Un accès transparent aux rapports financiers via un espace personnel en ligne.
+    - label: Que se passe-t-il si l’objectif financier n’est pas atteint ?
+      content: >
+        Si la totalité des fonds n'est pas collectée, le projet sera lancé dans une version réduite
+        adaptée au budget disponible. Les investisseurs seront informés des ajustements.
+    - label: Quels sont les risques associés ?
+      content: >
+        Les risques incluent :
+        - Fluctuation des coûts des matières premières.
+        - Retards dans l’approvisionnement ou l’installation des équipements.
+        Des solutions d’atténuation sont prévues, comme des partenariats locaux et une gestion proactive.
+    - label: Quand puis-je espérer un retour sur investissement ?
+      content: >
+        Les premiers dividendes seront distribués à partir de la deuxième année d’exploitation,
+        après avoir atteint la phase de rentabilité.
+    - label: Puis-je revendre mes parts ?
+      content: >
+        Oui, vos parts sont transférables. Vous pouvez les céder à un tiers en informant l’équipe de CAMFID pour mettre à jour le registre des actionnaires.
+    - label: Quelle est l’utilisation des fonds collectés ?
+      content: >
+       Nous voulons collecter 290.000.000 FCFA et ces fonds seront répartis comme suit: 34 % Achat d'équipements de recyclage • 46 % Collecte, logistique des plastiques, traitement et production • 5 % Marketing et sensibilisation • 10 % Frais administratifs • 5 % Maintenance et imprévus
+    - label: Pourquoi ce projet est-il une bonne opportunité ?
+      content: >
+        Ce projet :
+        - Transforme un problème environnemental en une opportunité économique.
+        - Offre un modèle d’économie circulaire avec des impacts sociaux, environnementaux et financiers.
+        - Bénéficie d’un marché en croissance rapide pour les granulés plastiques recyclés et les produits dérivés.
+    - label: Quels sont les types de plastiques recyclés ?
+      content: >
+        Nous recyclons :
+        - PVC (Polyvinyl Chloride)
+        - PET (Polyéthylène Téréphtalate)
+        - PEHD (Polyéthylène Haute Densité)
+        - PP (Polypropylène)
+    - label: Comment les plastiques sont-ils collectés et triés ?
+      content: >
+        Les plastiques sont collectés auprès des ménages, entreprises et institutions, puis triés
+        selon leur type et qualité.
+    - label: Quel est le processus de recyclage des plastiques ?
+      content: >
+        Les plastiques sont collectés, broyés, nettoyés, et transformés en granulés utilisés pour
+        fabriquer de nouveaux produits PVC.
+    - label: Quels sont les avantages du recyclage des plastiques au Cameroun ?
+      content: >
+        Le recyclage réduit :
+        - Les déchets plastiques dans l'environnement.
+        - Les importations de granulés plastiques.
+        - Les émissions de gaz à effet de serre.
+        - Le temps de mise à disposition des granulés pour les entreprises.
+    - label: Quels sont les produits finaux du recyclage des plastiques chez CAMFID ?
+      content: >
+        Nos produits incluent :
+        - Tuyaux et raccords PVC.
+        - Fenêtres et portes.
+        - Bouteilles plastiques, bidons, chaises et tables en plastique.
+    - label: Comment le projet contribue-t-il à l'économie circulaire ?
+      content: >
+        Nous réduisons les déchets, réutilisons les matières premières, limitons les importations,
+        et créons des emplois, tout en aidant les entreprises à respecter les lois et régulations RSE.

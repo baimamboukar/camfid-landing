@@ -27,10 +27,10 @@ const links = [
     label: "Acceuil",
     to: "/",
   },
-  {
-    label: "Investir",
-    to: "/pricing",
-  },
+  // {
+  //   label: "Investir",
+  //   to: "/pricing",
+  // },
   {
     label: "Actualites",
     to: "/blog",

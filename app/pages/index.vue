@@ -72,7 +72,13 @@ useSeoMeta({
     >
       <ImagePlaceholder :path="section.image" />
     </ULandingSection>
-
+    <RaisingStatus
+      :videoLink="page.raisingStatus.videoLink"
+      :fundsCollected="page.raisingStatus.fundsCollected"
+      :target="page.raisingStatus.target"
+      :investors="page.raisingStatus.investors"
+      :minTicket="page.raisingStatus.minTicket"
+    />
     <div class="ml-8 mr-8 mb-10">
       <InvestAction />
     </div>

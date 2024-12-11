@@ -23,19 +23,25 @@ hero:
 
 sections:
   - title: Nos Solutions de Recyclage
-    description: Services professionnels de recyclage pour PVC, PET, PEHD et PP
+    description: Services professionnels de collecte, transport, recyclage, production de granulés et fabrication de produits plastiques.
     id: services
     align: left
     image: /images/clustered.jpg
     features:
-      - name: Collecte de Plastique
+      - name: Collecte
         description: Collecte efficace auprès des ménages, entreprises et institutions
         icon: i-heroicons-truck
-      - name: Traitement
+      - name: Transport
+        description: Transport sécurisé des déchets plastiques pour le traitement
+        icon: i-heroicons-truck
+      - name: Recyclage
         description: Nettoyage et traitement avancé des matériaux plastiques
         icon: i-heroicons-cog
+      - name: Production de Granulés
+        description: Création de granulés plastiques recyclés de haute qualité
+        icon: i-heroicons-cube
       - name: Fabrication
-        description: Production de produits recyclés de haute qualité
+        description: Production de produits plastiques tels que tuyaux, raccords, et contenants
         icon: i-heroicons-building-factory
     links:
       - label: En Savoir Plus
@@ -46,20 +52,23 @@ sections:
         size: md
         class: ml-8
 
-  - title: Nos Produits 
-    description: Des granulés recyclés aux produits finis
+  - title: Nos Produits
+    description: Des granulés recyclés aux produits finis tels que bouteilles, tuyaux et contenants plastiques.
     align: right
     image: /images/pills.jpg
     features:
-      - name: Granulés
+      - name: Granulés recyclés
         description: Granulés plastiques recyclés de haute qualité
         icon: i-heroicons-cube
-      - name: Construction
-        description: Tuyaux et raccords PVC
-        icon: i-heroicons-wrench
-      - name: Biens de Consommation
-        description: Bouteilles, conteneurs, chaises et tables
+      - name: Preforms
+        description: Préformes en plastique prêtes à l’utilisation
+        icon: i-heroicons-cube
+      - name: Bouteilles et contenants
+        description: Bouteilles et contenants plastiques de qualité
         icon: i-heroicons-shopping-bag
+      - name: Tuyaux et raccords
+        description: Tuyaux PVC, raccords, gaines, et goulottes
+        icon: i-heroicons-wrench
     links:
       - label: Voir les Produits
         to: /products
@@ -71,31 +80,31 @@ sections:
 
 features:
   title: Pourquoi Choisir CAMFID ?
-  description: Participez à la création d'un avenir durable grâce à nos solutions de recyclage innovantes
+  description: Participez à la création d'un avenir durable grâce à nos solutions de recyclage innovantes.
   items:
     - title: Impact Environnemental
-      description: Réduisez les déchets et les émissions de gaz à effet de serre
+      description: Réduction des déchets plastiques abandonnés et de l’empreinte carbone locale, avec sensibilisation communautaire.
       icon: i-heroicons-globe-alt
     - title: Production Locale
-      description: Soutien à l'économie locale en réduisant la dépendance aux importations
+      description: Fabrication locale de granulés et produits plastiques pour réduire la dépendance aux importations.
       icon: i-heroicons-building-factory
     - title: Assurance Qualité
-      description: Produits recyclés de haute qualité répondant aux normes industrielles
+      description: Contrôles rigoureux pour garantir la conformité aux normes locales et internationales.
       icon: i-heroicons-check-badge
     - title: Création d'Emplois
-      description: Contribution à l'emploi local grâce aux initiatives de recyclage
+      description: Opportunités pour les populations locales dans la collecte et la transformation des déchets plastiques.
       icon: i-heroicons-users
     - title: Économie Circulaire
-      description: Promotion de l'utilisation durable des ressources
+      description: Transformation durable des déchets plastiques pour limiter l’utilisation de matières premières vierges.
       icon: i-heroicons-arrow-path
     - title: Partenariat
-      description: Collaboration avec les entreprises et les communautés
+      description: Collaboration avec les entreprises et les communautés pour des solutions responsables.
       icon: i-heroicons-hand-raised
 
 testimonials:
   headline: Histoires de Réussite
   title: Notre Impact dans la Communauté
-  description: Découvrez comment nos initiatives de recyclage transforment les vies
+  description: Découvrez comment nos initiatives de recyclage transforment les vies.
   items:
     - quote: Ensemble, nous transformons les déchets en opportunités et contribuons à un avenir plus durable pour notre planète !
       author:
@@ -128,9 +137,15 @@ testimonials:
 
 cta:
   title: Rejoignez la Révolution Verte
-  description: Contactez-nous pour commencer votre parcours de recyclage
+  description: Contactez-nous pour commencer votre parcours de recyclage.
   links:
     - label: Contactez-Nous
       size: xl
       color: primary
       to: "tel:+33676332863"
+raisingStatus:
+  videoLink: https://www.youtube.com/watch?v=9bZkp7q19f0
+  fundsCollected: 100000000
+  target: 290000000
+  investors: 100
+  minTicket: 10000
