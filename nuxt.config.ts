@@ -18,7 +18,7 @@ export default defineNuxtConfig({
 
   colorMode: {
     disableTransition: false,
-    preference: "light",
+    preference: "system",
   },
 
   routeRules: {
