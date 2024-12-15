@@ -70,6 +70,21 @@ useSeoMeta({
         <InvestAction />
       </center>
     </div>
+    <!-- START | Why Choose CAMFID Engineering Recycling-->
+    <ULandingSection
+      :title="page.features.title"
+      :description="page.features.description"
+    >
+      <UPageGrid>
+        <ULandingCard
+          v-for="(item, index) in page.features.items"
+          :key="index"
+          v-bind="item"
+        />
+      </UPageGrid>
+    </ULandingSection>
+    <!-- END | Why Choose CAMFID Engineering Reclycling-->
+
     <!-- <ULandingSection class="!pt-0">
       <ImagePlaceholder path="/images/pipes.jpg" />
     </ULandingSection> -->
@@ -84,19 +99,6 @@ useSeoMeta({
       :features="section.features"
     >
       <ImagePlaceholder :path="section.image" />
-    </ULandingSection>
-
-    <ULandingSection
-      :title="page.features.title"
-      :description="page.features.description"
-    >
-      <UPageGrid>
-        <ULandingCard
-          v-for="(item, index) in page.features.items"
-          :key="index"
-          v-bind="item"
-        />
-      </UPageGrid>
     </ULandingSection>
 
     <ULandingSection
