@@ -29,8 +29,8 @@ const progress = (props.fundsCollected / props.target) * 100;
 
 <template>
   <ULandingSection
-    :title="'Fundraising Campaign'"
-    :description="'Support the project and make a difference.'"
+    :title="'Rejoignez Notre Campagne de Levee de Fonds'"
+    :description="'Supportez le projet et faites une difference'"
   >
     <div class="flex gap-6">
       <!-- Added gap for spacing between video and stats -->
@@ -48,31 +48,29 @@ const progress = (props.fundsCollected / props.target) * 100;
           <div class="px-4 py-2">
             <!-- Funds Collected -->
             <div class="mb-4">
-              <div class="text-sm text-gray-600">Funds Collected</div>
-              <div class="text-xl font-bold">XAF</div>
+              <div class="text-sm text-gray-200">Objectif de la Levee</div>
+              <div class="text-xl font-bold">XAF 295 Millions</div>
+            </div>
+
+            <!-- Funds Collected -->
+            <div class="mb-4">
+              <div class="text-sm text-gray-200">Fonds Collectes</div>
+              <div class="text-xl font-bold">XAF 120 Millions</div>
             </div>
 
             <!-- Fundraising Progress -->
-            <div class="mb-4">
-              <div class="text-sm text-gray-600">Progress</div>
-              <UMeter
-                :size="'2xl'"
-                indicator
-                label="Objectifs"
-                :value="progress"
-              />
-            </div>
+            <UMeter :size="'xl'" label="34% de l'objectif" :value="progress" />
 
             <!-- Investors -->
-            <div class="mb-4">
-              <div class="text-sm text-gray-600">Investors</div>
+            <div class="mb-4 mt-4">
+              <div class="text-sm text-gray-200">Investisseurs</div>
               <div class="text-xl font-bold">{{ props.investors }}</div>
             </div>
 
             <!-- Minimum Ticket -->
             <div class="mb-4">
-              <div class="text-sm text-gray-600">Ticket Minimum</div>
-              <div class="text-xl font-bold">XAF</div>
+              <div class="text-sm text-gray-200">Ticket Minimum</div>
+              <div class="text-xl font-bold">XAF 7,500</div>
             </div>
           </div>
 

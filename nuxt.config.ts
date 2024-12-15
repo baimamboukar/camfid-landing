@@ -2,16 +2,23 @@
 export default defineNuxtConfig({
   extends: ["@nuxt/ui-pro"],
   modules: [
+    "@nuxt/ui",
+    "@nuxtjs/i18n",
     "@nuxt/content",
     "@nuxt/eslint",
     "@nuxt/fonts",
     "@nuxt/image",
-    "@nuxt/ui",
     "@nuxthq/studio",
     "@vueuse/nuxt",
     "nuxt-og-image",
   ],
-
+  i18n: {
+    locales: [
+      { code: "en", language: "en-US" },
+      { code: "fr", language: "fr-FR" },
+    ],
+    defaultLocale: "en",
+  },
   devtools: {
     enabled: true,
   },

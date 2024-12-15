@@ -57,9 +57,22 @@ useSeoMeta({
       </template>
     </ULandingHero>
 
-    <ULandingSection class="!pt-0">
+    <RaisingStatus
+      :videoLink="page.raisingStatus.videoLink"
+      :fundsCollected="page.raisingStatus.fundsCollected"
+      :target="page.raisingStatus.target"
+      :investors="page.raisingStatus.investors"
+      :minTicket="page.raisingStatus.minTicket"
+      class="!pt-2 !pb-10"
+    />
+    <div class="ml-28 mr-28 mb-10 !pt-0 !pb-0">
+      <center>
+        <InvestAction />
+      </center>
+    </div>
+    <!-- <ULandingSection class="!pt-0">
       <ImagePlaceholder path="/images/pipes.jpg" />
-    </ULandingSection>
+    </ULandingSection> -->
 
     <ULandingSection
       class="!pt-0"
@@ -72,16 +85,7 @@ useSeoMeta({
     >
       <ImagePlaceholder :path="section.image" />
     </ULandingSection>
-    <RaisingStatus
-      :videoLink="page.raisingStatus.videoLink"
-      :fundsCollected="page.raisingStatus.fundsCollected"
-      :target="page.raisingStatus.target"
-      :investors="page.raisingStatus.investors"
-      :minTicket="page.raisingStatus.minTicket"
-    />
-    <div class="ml-8 mr-8 mb-10">
-      <InvestAction />
-    </div>
+
     <ULandingSection
       :title="page.features.title"
       :description="page.features.description"

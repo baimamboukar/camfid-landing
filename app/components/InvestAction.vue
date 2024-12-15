@@ -11,7 +11,7 @@
     align="bottom"
     :features="[
       'Generez des revenus passifs',
-      'Participez a la croissance de Camfid Engineering',
+      'Participez a la croissance de CAMFID Engineering',
       'Achetez des actions a partir de 15000 FCFA',
       'Recevez des dividendes annuels',
       'Revendez vos actions a tout moment',

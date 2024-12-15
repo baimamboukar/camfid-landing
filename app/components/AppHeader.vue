@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import type { NavItem } from "@nuxt/content";
+// import * as locales from "@nuxt/ui/locale";
 
 const navigation = inject<Ref<NavItem[]>>("navigation", ref([]));
 
+// const { locale } = useI18n();
 // const links = [
 //   {
 //     label: "Acceuil",
@@ -55,6 +57,7 @@ const links = [
 
     <template #right>
       <UButton label="Investir Maintenant" color="primary" to="/signup" />
+      <!-- <ULocaleSelect v-model="locale" :locales="locales" /> -->
       <!-- <UButton
         label="Sign up"
         icon="i-heroicons-arrow-right-20-solid"

@@ -18,7 +18,7 @@ useHead({
 });
 
 useSeoMeta({
-  titleTemplate: "%s - Camfid Engineering",
+  titleTemplate: "%s - Camfid Engineering Recycling",
   twitterCard: "summary_large_image",
 });
 </script>
