@@ -25,12 +25,12 @@ const props = defineProps({
       class="aspect-w-16 aspect-h-9 rounded-lg relative overflow-hidden border border-dashed border-gray-900/10 dark:border-white/10"
     >
       <!-- Check if it's a video and render the video tag -->
-      <template v-if="isVideo && videoLink">
+      <template v-if="isVideo">
         <video
           class="absolute inset-0 h-full w-full object-cover"
           controls
-          :src="videoLink"
-          alt="Video"
+          src="/images/camfid.mp4"
+          alt="CAMFID Video"
         />
       </template>
 

@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxthq/studio",
     "@vueuse/nuxt",
-    "nuxt-og-image",
   ],
   i18n: {
     locales: [

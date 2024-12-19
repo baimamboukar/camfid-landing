@@ -7,7 +7,7 @@ hero:
   description: Rejoignez-vous a nous transformer les dechets plastiques en produits recycles de qualite pour un avenir durable! Chaque part acheter compte et nous rapproche de l'objectif.
   headline:
     label: Solutions Durables
-    icon: i-heroicons-leaf
+    icon: i-heroicons-globle-europe-africa
   links:
     - label: Invester
       to: '#'
@@ -16,7 +16,7 @@ hero:
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
     - label: Rejoignez Notre Mission
-      icon: i-heroicons-globe-alt
+      icon: i-heroicons-globe-europe-africa
       size: xl
       color: gray
       to: "#"
@@ -54,9 +54,9 @@ sections:
       - name: Granulés recyclés
         description: Granulés plastiques recyclés de haute qualité
         icon: i-heroicons-cube
-      - name: Preforms
-        description: Préformes en plastique prêtes à l’utilisation
-        icon: i-heroicons-cube
+      # - name: Preforms
+      #   description: Préformes en plastique prêtes à l’utilisation
+      #   icon: i-heroicons-cube
       - name: Bouteilles et contenants
         description: Bouteilles et contenants plastiques de qualité
         icon: i-heroicons-shopping-bag
@@ -78,7 +78,7 @@ features:
   items:
     - title: Impact Environnemental
       description: Réduction des déchets plastiques abandonnés et de l’empreinte carbone locale, avec sensibilisation communautaire.
-      icon: i-heroicons-globe-alt
+      icon: i-heroicons-globe-europe-africa
     - title: Production Locale
       description: Fabrication locale de granulés et produits plastiques pour réduire la dépendance aux importations.
       icon: i-heroicons-building-factory

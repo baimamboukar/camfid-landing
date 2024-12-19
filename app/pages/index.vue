@@ -17,6 +17,24 @@ useSeoMeta({
   description: page.value.description,
   ogDescription: page.value.description,
 });
+let logos = [
+  {
+    name: "MboaWaste",
+    src: "/logos/1.png",
+  },
+  {
+    name: "ReclyingZ",
+    src: "/logos/2.jpg",
+  },
+  {
+    name: "GIZ",
+    src: "/logos/3.jpg",
+  },
+  {
+    name: "UNDP",
+    src: "/logos/4.webp",
+  },
+];
 </script>
 
 <template>
@@ -100,6 +118,11 @@ useSeoMeta({
     >
       <ImagePlaceholder :path="section.image" />
     </ULandingSection>
+
+    <!-- Partners Logos -->
+
+    <PartnersLogos :logos="logos" />
+    <!-- Partners Logo -->
 
     <ULandingSection
       :headline="page.testimonials.headline"

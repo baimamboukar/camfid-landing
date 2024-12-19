@@ -37,7 +37,7 @@ const progress = (props.fundsCollected / props.target) * 100;
 
       <!-- Left Side: Video -->
       <div class="flex-1 flex flex-col mr-8">
-        <ImagePlaceholder :path="props.videoLink" class="flex-1" />
+        <ImagePlaceholder :path="props.videoLink" class="flex-1" isVideo />
       </div>
 
       <!-- Right Side: Fundraising Stats in Card -->
