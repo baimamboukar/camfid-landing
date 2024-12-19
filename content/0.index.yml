@@ -4,7 +4,7 @@ navigation: false
 
 hero:
   title: Moins de déchets, plus de possibilités!
-  description: Rejoignez-nous dans la transformation des déchets plastiques en produits recyclés de haute qualité pour un avenir durable.
+  description: Rejoignez-vous a nous transformer les dechets plastiques en produits recycles de qualite pour un avenir durable! Chaque part acheter compte et nous rapproche de l'objectif.
   headline:
     label: Solutions Durables
     icon: i-heroicons-leaf
@@ -23,7 +23,7 @@ hero:
 
 sections:
   - title: Nos Solutions de Recyclage
-    description: Services professionnels de collecte, transport, recyclage, production de granulés et fabrication de produits plastiques.
+    description: Services professionnels de collecte, transport, recyclage et production de produits plastiques.
     id: services
     align: left
     image: /images/clustered.jpg
@@ -31,18 +31,12 @@ sections:
       - name: Collecte
         description: Collecte efficace auprès des ménages, entreprises et institutions
         icon: i-heroicons-truck
-      - name: Transport
-        description: Transport sécurisé des déchets plastiques pour le traitement
-        icon: i-heroicons-truck
       - name: Recyclage
         description: Nettoyage et traitement avancé des matériaux plastiques
         icon: i-heroicons-cog
-      - name: Production de Granulés
+      - name: Production
         description: Création de granulés plastiques recyclés de haute qualité
         icon: i-heroicons-cube
-      - name: Fabrication
-        description: Production de produits plastiques tels que tuyaux, raccords, et contenants
-        icon: i-heroicons-building-factory
     links:
       - label: En Savoir Plus
         to: #
@@ -88,18 +82,18 @@ features:
     - title: Production Locale
       description: Fabrication locale de granulés et produits plastiques pour réduire la dépendance aux importations.
       icon: i-heroicons-building-factory
-    - title: Assurance Qualité
-      description: Contrôles rigoureux pour garantir la conformité aux normes locales et internationales.
-      icon: i-heroicons-check-badge
-    - title: Création d'Emplois
-      description: Opportunités pour les populations locales dans la collecte et la transformation des déchets plastiques.
-      icon: i-heroicons-users
+    # - title: Assurance Qualité
+    #   description: Contrôles rigoureux pour garantir la conformité aux normes locales et internationales.
+    #   icon: i-heroicons-check-badge
+    # - title: Création d'Emplois
+    #   description: Opportunités pour les populations locales dans la collecte et la transformation des déchets plastiques.
+    #   icon: i-heroicons-users
     - title: Économie Circulaire
       description: Transformation durable des déchets plastiques pour limiter l’utilisation de matières premières vierges.
-      icon: i-heroicons-arrow-path
-    - title: Partenariat
-      description: Collaboration avec les entreprises et les communautés pour des solutions responsables.
-      icon: i-heroicons-hand-raised
+    #   icon: i-heroicons-arrow-path
+    # - title: Partenariat
+    #   description: Collaboration avec les entreprises et les communautés pour des solutions responsables.
+    #   icon: i-heroicons-hand-raised
 
 testimonials:
   headline: Histoires de Réussite

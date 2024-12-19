@@ -29,10 +29,7 @@ const links = [
     label: "Acceuil",
     to: "/",
   },
-  // {
-  //   label: "Investir",
-  //   to: "/pricing",
-  // },
+
   {
     label: "Actualites",
     to: "/blog",
@@ -41,6 +38,10 @@ const links = [
     label: "Aide & FAQs",
     to: "/faq",
     icon: "i-heroicons-question-mark-circle-20-solid",
+  },
+  {
+    label: "A Propos",
+    to: "/about",
   },
   {
     label: "Mon Espace",
@@ -53,6 +54,7 @@ const links = [
   <UHeader :links="links">
     <template #logo>
       <b class="text-bold text-camfid-primary-300">CAMFID</b> Engineering
+      Recycling
     </template>
 
     <template #right>
