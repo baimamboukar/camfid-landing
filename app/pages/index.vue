@@ -1,4 +1,9 @@
 <script setup lang="ts">
+const open = ref(false);
+// toggle open action
+const toggleOpen = () => {
+  open.value = !open.value;
+};
 const { data: page } = await useAsyncData("index", () =>
   queryContent("/").findOne()
 );
@@ -151,6 +156,10 @@ let logos = [
       />
     </ULandingSection>
   </div>
+
+  <UDashboardSlideover v-model="open" title="Investir">
+    <template #header> LOREM IPSUM </template>
+  </UDashboardSlideover>
 </template>
 
 <style scoped>

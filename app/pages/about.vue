@@ -14,7 +14,7 @@ if (!page.value) {
 <template>
   <ULandingSection title="Mission and Vision" :description="page.engagement">
   </ULandingSection>
-  <ULandingLogos :title="page.partners.title" align="center">
+  <!-- <ULandingLogos :title="page.partners.title" align="center">
     <image
       v-for="(partner, index) in page.partners.items"
       :key="index"
@@ -22,15 +22,12 @@ if (!page.value) {
       :src="partner.logo"
       class="w-10 h-10 flex-shrink-0"
     />
-  </ULandingLogos>
+  </ULandingLogos> -->
   <ULandingSection
     title="Objectif et Mission"
     :features="page.features"
     align="right"
   >
-    <img
-      src="https://picsum.photos/360/640"
-      class="w-full h-[55%] rounded-md shadow-xl ring-1 ring-gray-300 dark:ring-gray-700"
-    />
+    <ImagePlaceholder path="/images/fill.jpg" class="h-full" />
   </ULandingSection>
 </template>
