@@ -1,9 +1,4 @@
 <script setup lang="ts">
-const open = ref(false);
-// toggle open action
-const toggleOpen = () => {
-  open.value = !open.value;
-};
 const { data: page } = await useAsyncData("index", () =>
   queryContent("/").findOne()
 );
@@ -86,9 +81,9 @@ let logos = [
       :target="page.raisingStatus.target"
       :investors="page.raisingStatus.investors"
       :minTicket="page.raisingStatus.minTicket"
-      class="!pt-2 !pb-10"
+      class=""
     />
-    <div class="ml-28 mr-28 mb-10 !pt-0 !pb-0">
+    <div class="xl:ml-28 xl:mr-28 mb-10 !pt-0 !pb-0 sm:ml-4 sm:mr-4">
       <center>
         <InvestAction />
       </center>
@@ -156,10 +151,6 @@ let logos = [
       />
     </ULandingSection>
   </div>
-
-  <UDashboardSlideover v-model="open" title="Investir">
-    <template #header> LOREM IPSUM </template>
-  </UDashboardSlideover>
 </template>
 
 <style scoped>

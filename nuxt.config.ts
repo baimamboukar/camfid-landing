@@ -28,8 +28,8 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    "/api/search.json": { prerender: true },
-    "/docs": { redirect: "/docs/getting-started", prerender: false },
+    // "/api/search.json": { prerender: true },
+    // "/docs": { redirect: "/docs/getting-started", prerender: false },
   },
 
   future: {
@@ -40,8 +40,8 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ["/", "/docs"],
-      crawlLinks: true,
+      //routes: ["/", "/docs"],
+      //crawlLinks: true,
     },
   },
 

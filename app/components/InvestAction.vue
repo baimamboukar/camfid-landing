@@ -1,12 +1,17 @@
+<script setup lang="ts">
+import { ref } from "vue";
+const isOpen = ref(false);
+// toggle open action
+</script>
+
 <template>
   <UPricingCard
     title="Invester Maintenant"
-    description="Acheter des actions chez Camfid Engineering"
     price="15000"
     discount="7,500 FCFA"
     cycle=""
     :highlight="false"
-    :button="{ label: 'Acheter Maintenant' }"
+    :button="{ label: 'Acheter Maintenant', click: () => (isOpen = !isOpen) }"
     orientation="horizontal"
     align="bottom"
     :features="[
@@ -18,4 +23,9 @@
       'Recevez des dividendes annuels',
     ]"
   />
+  <UModal v-model="isOpen">
+    <div class="p-10">
+      <InvestForm />
+    </div>
+  </UModal>
 </template>

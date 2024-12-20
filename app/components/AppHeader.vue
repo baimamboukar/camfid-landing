@@ -58,7 +58,6 @@ const links = [
     </template>
 
     <template #right>
-      <UButton label="Investir Maintenant" color="primary" to="/signup" />
       <!-- <ULocaleSelect v-model="locale" :locales="locales" /> -->
       <!-- <UButton
         label="Sign up"
@@ -72,6 +71,7 @@ const links = [
 
     <template #panel>
       <UNavigationTree :links="mapContentNavigation(navigation)" default-open />
+      <UButton label="Investir Maintenant" color="primary" to="/signup" />
     </template>
   </UHeader>
 </template>

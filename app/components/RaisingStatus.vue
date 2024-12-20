@@ -32,17 +32,15 @@ const progress = (props.fundsCollected / props.target) * 100;
     :title="'Rejoignez Notre Campagne de Levee de Fonds'"
     :description="'Supportez le projet et faites une difference'"
   >
-    <div class="flex gap-6">
-      <!-- Added gap for spacing between video and stats -->
-
+    <div class="flex flex-col xl:flex-row xl:gap-12">
       <!-- Left Side: Video -->
-      <div class="flex-1 flex flex-col mr-8">
+      <div class="flex-1 flex flex-col mb-6 xl:mb-0">
         <ImagePlaceholder :path="props.videoLink" class="flex-1" isVideo />
       </div>
 
       <!-- Right Side: Fundraising Stats in Card -->
       <div
-        class="w-1/3 flex flex-col bg-gray-900/5 dark:bg-white/5 ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 rounded-xl lg:-m-4 p-4"
+        class="w-full xl:w-1/3 flex flex-col bg-gray-900/5 dark:bg-white/5 ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 rounded-xl lg:-m-4 p-4"
       >
         <UCard class="flex-1 color-auto">
           <div class="px-4 py-2">
@@ -84,5 +82,5 @@ const progress = (props.fundsCollected / props.target) * 100;
 </template>
 
 <style scoped>
-/* Optional: Customize the layout and design as needed */
+/* Add responsive CSS if needed */
 </style>
