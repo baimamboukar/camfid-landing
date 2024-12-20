@@ -26,7 +26,7 @@ useSeoMeta({
   ogDescription: page.value.description,
 });
 
-defineOgImageComponent("Saas");
+// defineOgImageComponent("Saas");
 </script>
 
 <template>

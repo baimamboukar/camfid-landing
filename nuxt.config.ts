@@ -11,13 +11,13 @@ export default defineNuxtConfig({
     "@nuxthq/studio",
     "@vueuse/nuxt",
   ],
-  i18n: {
-    locales: [
-      { code: "en", language: "en-US" },
-      { code: "fr", language: "fr-FR" },
-    ],
-    defaultLocale: "en",
-  },
+  // i18n: {
+  //   locales: [
+  //     { code: "en", language: "en-US" },
+  //     { code: "fr", language: "fr-FR" },
+  //   ],
+  //   defaultLocale: "en",
+  // },
   devtools: {
     enabled: true,
   },

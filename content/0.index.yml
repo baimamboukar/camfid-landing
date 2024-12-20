@@ -105,28 +105,28 @@ testimonials:
         name: Équipe CAMFID
         description: Champions de l'Environnement
         avatar:
-          src: /images/team.jpg
+          src: /android-chrome-192x192.png
           loading: lazy
     - quote: Ensemble, nous transformons les déchets en opportunités et contribuons à un avenir plus durable pour notre planète !
       author:
         name: Équipe CAMFID
         description: Champions de l'Environnement
         avatar:
-          src: /images/team.jpg
+          src: /android-chrome-192x192.png
           loading: lazy
     - quote: Ensemble, nous transformons les déchets en opportunités et contribuons à un avenir plus durable pour notre planète !
       author:
         name: Équipe CAMFID
         description: Champions de l'Environnement
         avatar:
-          src: /images/team.jpg
+          src: /android-chrome-192x192.png
           loading: lazy
     - quote: Ensemble, nous transformons les déchets en opportunités et contribuons à un avenir plus durable pour notre planète !
       author:
         name: Équipe CAMFID
         description: Champions de l'Environnement
         avatar:
-          src: /images/team.jpg
+          src: /android-chrome-192x192.png
           loading: lazy
 
 cta:
