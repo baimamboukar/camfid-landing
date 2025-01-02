@@ -72,10 +72,11 @@ export default defineNuxtConfig({
     families: [
       // do not resolve this font with any provider from `@nuxt/fonts`
       { name: "Montserrat", provider: "google" },
-      { name: "Open Sans", provider: "google" },
-      { name: "Alef", provider: "google" },
+      { name: "Raleway", provider: "google" },
+      { name: "Work Sans", provider: "google" },
       // only resolve this font with the `google` provider
       { name: "Space Grotesk", provider: "google" },
+
       // specify specific font data - this will bypass any providers
     ],
   },

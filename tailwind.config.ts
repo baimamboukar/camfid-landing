@@ -5,7 +5,7 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Alef"], //, ...defaultTheme.fontFamily.serif],
+        sans: ["Montserrat", ...defaultTheme.fontFamily.serif],
       },
       colors: {
         backblue: {
