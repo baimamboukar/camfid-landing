@@ -7,7 +7,7 @@ hero:
   description: Rejoignez-vous a nous transformer les dechets plastiques en produits recycles de qualite pour un avenir durable! Chaque part acheter compte et nous rapproche de l'objectif.
   headline:
     label: Solutions Durables
-    icon: i-heroicons-globle-europe-africa
+    icon: i-heroicons-globle
   links:
     - label: Invester
       to: '#'

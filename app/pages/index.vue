@@ -121,7 +121,7 @@ let logos = [
 
     <!-- Partners Logos -->
 
-    <PartnersLogos :logos="logos" />
+    <!-- <PartnersLogos :logos="logos" /> -->
     <!-- Partners Logo -->
 
     <ULandingSection
