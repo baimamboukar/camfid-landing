@@ -23,8 +23,8 @@ const isOpen = ref(false);
       'Recevez des dividendes annuels',
     ]"
   />
-  <UModal v-model="isOpen">
-    <div class="p-10">
+  <UModal v-model="isOpen" :ui="{ width: '' }">
+    <div class="p-10 w-full">
       <InvestForm />
     </div>
   </UModal>
