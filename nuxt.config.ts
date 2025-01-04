@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxthq/studio",
     "@vueuse/nuxt",
+    "@nuxtjs/supabase",
   ],
   // i18n: {
   //   locales: [
