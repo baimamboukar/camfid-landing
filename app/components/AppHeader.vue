@@ -37,7 +37,7 @@ const links = [
   {
     label: "Aide & FAQs",
     to: "/faq",
-    icon: "i-heroicons-question-mark-circle-20-solid",
+    //icon: "i-heroicons-question-mark-circle-20-solid",
   },
   {
     label: "A Propos",

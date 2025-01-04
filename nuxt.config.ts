@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/supabase",
   ],
+
   // i18n: {
   //   locales: [
   //     { code: "en", language: "en-US" },
@@ -19,6 +20,20 @@ export default defineNuxtConfig({
   //   ],
   //   defaultLocale: "en",
   // },
+
+  supabase: {
+    redirectOptions: {
+      login: "/login",
+      callback: "/confirm",
+      include: ["/espace"],
+      // exclude: [
+      //   "/",
+      //   "http://localhost:3000/",
+      //   "https://camfidengineering.com/",
+      // ],
+      cookieRedirect: false,
+    },
+  },
   devtools: {
     enabled: true,
   },
