@@ -4,7 +4,7 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: "Login",
+  title: "Se Connecter",
 });
 
 const fields = [
@@ -12,13 +12,13 @@ const fields = [
     name: "email",
     type: "email",
     label: "Email",
-    placeholder: "Enter your email",
+    placeholder: "Entrer votre adresse email",
   },
   {
     name: "password",
-    label: "Password",
+    label: "Mot De Passe",
     type: "password",
-    placeholder: "Enter your password",
+    placeholder: "Entrer votre mote de passe",
   },
 ];
 
@@ -52,33 +52,32 @@ function onSubmit(data: any) {
 <template>
   <UCard class="max-w-sm w-full bg-white/75 dark:bg-white/5 backdrop-blur">
     <UAuthForm
+      :loading="false"
       :fields="fields"
       :validate="validate"
-      :providers="providers"
-      title="Welcome back"
-      align="top"
-      icon="i-heroicons-lock-closed"
+      title="Salut 👋, Bienvenue!"
+      align="bottom"
       :ui="{ base: 'text-center', footer: 'text-center' }"
       :submit-button="{ trailingIcon: 'i-heroicons-arrow-right-20-solid' }"
       @submit="onSubmit"
     >
       <template #description>
-        Don't have an account?
+        Vous n'avez pas de compte?
         <NuxtLink to="/signup" class="text-primary font-medium"
-          >Sign up</NuxtLink
+          >Inscrivez-vous</NuxtLink
         >.
       </template>
 
       <template #password-hint>
         <NuxtLink to="/" class="text-primary font-medium"
-          >Forgot password?</NuxtLink
+          >Mot de passe oublier?</NuxtLink
         >
       </template>
 
       <template #footer>
-        By signing in, you agree to our
+        J'accepte les
         <NuxtLink to="/" class="text-primary font-medium"
-          >Terms of Service</NuxtLink
+          >Termes de Service</NuxtLink
         >.
       </template>
     </UAuthForm>

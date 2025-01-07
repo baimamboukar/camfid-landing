@@ -21,6 +21,12 @@ const fields = [
     placeholder: "Entrez votre email",
   },
   {
+    name: "phone",
+    type: "text",
+    label: "Telephone",
+    placeholder: "Entez votre numero de Telephone",
+  },
+  {
     name: "password",
     label: "Mot de Passe",
     type: "password",
@@ -60,7 +66,6 @@ function onSubmit(data: any) {
     <UAuthForm
       :fields="fields"
       :validate="validate"
-      :providers="providers"
       align="top"
       title="Espace Investisseur"
       :ui="{ base: 'text-center', footer: 'text-center' }"

@@ -45,7 +45,7 @@ let logos = [
       :links="page.hero.links"
     >
       <div
-        class="absolute inset-0 dotted-grid z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        class="absolute inset-0 landing-grid dotted-grid z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
       />
 
       <template #headline>
@@ -154,6 +154,26 @@ let logos = [
 </template>
 
 <style scoped>
+.gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgb(var(--color-primary-500) / 0.25) 0,
+    #fff 100%
+  );
+}
+
+.dark {
+  .gradient {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgb(var(--color-primary-400) / 0.1) 0,
+      rgb(var(--color-gray-950)) 100%
+    );
+  }
+}
 .landing-grid {
   background-size: 100px 100px;
   background-image: linear-gradient(
