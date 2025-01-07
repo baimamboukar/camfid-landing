@@ -1,17 +1,25 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
+
 const isOpen = ref(false);
 const user = useSupabaseUser();
 
-const isAuthenticated = computed(() => user !== null);
-console.log("----------------IS AUTH---------------------------🚩`");
-console.log(isAuthenticated.value);
-console.log("------------------------------------------🚩`");
-
-console.log("---------------USER---------------------------🎊`");
-console.log(user.value);
-console.log("------------------------------------------🎊`");
-// toggle open action
+const isAuthenticated = computed(() => user.value !== null);
+const handleButtonClick = async () => {
+  if (isAuthenticated.value) {
+    isOpen.value = true;
+  } else {
+    await navigateTo({
+      path: "/login",
+      state: {
+        loginMessage: "Please login firstx113",
+      },
+      query: {
+        message: "Please login first",
+      },
+    });
+  }
+};
 </script>
 
 <template>
@@ -23,8 +31,7 @@ console.log("------------------------------------------🎊`");
     :highlight="false"
     :button="{
       label: 'Acheter Maintenant',
-      click: () =>
-        isAuthenticated ? (isOpen = !isOpen) : navigateTo('/login'),
+      click: handleButtonClick,
     }"
     orientation="horizontal"
     align="bottom"
