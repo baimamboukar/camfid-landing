@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { supabase } from "../../utils/supabase";
 definePageMeta({
   layout: "auth",
 });
@@ -35,7 +34,7 @@ const validate = (state: any) => {
 
 const loading = ref(false);
 const router = useRouter();
-
+const supabase = useSupabaseClient();
 async function onSubmit(data: any) {
   try {
     loading.value = true;
@@ -49,7 +48,7 @@ async function onSubmit(data: any) {
     // Redirect to home page after successful login
     router.push("/");
   } catch (error: any) {
-    console.error("Error:", error.message);
+    console.error(">>>>>> Auth Error <<<<<<", error.message);
   } finally {
     loading.value = false;
   }
@@ -86,7 +85,10 @@ const message = computed(() => route.query.message);
         title="Salut 👋, Bienvenue!"
         align="bottom"
         :ui="{ base: 'text-center', footer: 'text-center' }"
-        :submit-button="{ trailingIcon: 'i-heroicons-arrow-right-20-solid' }"
+        :submit-button="{
+          trailingIcon: 'i-heroicons-arrow-right-20-solid',
+          loading: loading,
+        }"
         @submit="onSubmit"
       >
         <template #description>

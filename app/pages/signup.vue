@@ -7,6 +7,12 @@ useSeoMeta({
   title: "Creer un Compte",
 });
 
+// Initialize Supabase client and router
+const supabase = useSupabaseClient();
+const router = useRouter();
+const loading = ref(false);
+
+// Form fields configuration
 const fields = [
   {
     name: "name",
@@ -34,33 +40,83 @@ const fields = [
   },
 ];
 
+// Form validation
 const validate = (state: any) => {
   const errors = [];
-  if (!state.email)
-    errors.push({ path: "email", message: "Email is required" });
-  if (!state.password)
-    errors.push({ path: "password", message: "Password is required" });
+  if (!state.name) {
+    errors.push({ path: "name", message: "Le nom est obligatoire" });
+  }
+  if (!state.email) {
+    errors.push({ path: "email", message: "L'email est obligatoire" });
+  }
+  if (!state.phone) {
+    errors.push({ path: "phone", message: "Le téléphone est obligatoire" });
+  }
+  if (!state.password) {
+    errors.push({
+      path: "password",
+      message: "Le mot de passe est obligatoire",
+    });
+  }
   return errors;
 };
+
+// Handle form submission
+async function onSubmit(data: any) {
+  try {
+    loading.value = true;
+
+    // Sign up with Supabase
+    const { error: signUpError } = await supabase.auth.signUp({
+      email: data.email,
+      password: data.password,
+      options: {
+        data: {
+          full_name: data.name,
+          phone: data.phone,
+        },
+      },
+    });
+
+    if (signUpError) throw signUpError;
+
+    // Redirect to login page with success message
+    await navigateTo("/login", {
+      query: {
+        message:
+          "Compte créé avec succès. Veuillez vérifier votre email pour confirmer votre compte.",
+      },
+    });
+  } catch (error: any) {
+    console.error("Error during signup:", error.message);
+    // Handle specific error cases here
+  } finally {
+    loading.value = false;
+  }
+}
+
+// Google Authentication
+async function signInWithGoogle() {
+  try {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
+    if (error) throw error;
+  } catch (error: any) {
+    console.error("Google auth error:", error.message);
+  }
+}
 
 const providers = [
   {
     label: "Continuer avec Google",
     icon: "i-simple-icons-google",
     color: "white" as const,
-    click: () => {
-      console.log("Redirect to Google");
-    },
+    click: signInWithGoogle,
   },
 ];
-
-function onSubmit(data: any) {
-  console.log("Submitted", data);
-}
 </script>
 
-<!-- eslint-disable vue/multiline-html-element-content-newline -->
-<!-- eslint-disable vue/singleline-html-element-content-newline -->
 <template>
   <UCard class="max-w-sm w-full bg-white/75 dark:bg-white/5 backdrop-blur">
     <UAuthForm
@@ -69,7 +125,10 @@ function onSubmit(data: any) {
       align="top"
       title="Espace Investisseur"
       :ui="{ base: 'text-center', footer: 'text-center' }"
-      :submit-button="{ label: 'Creer Mon Espace' }"
+      :submit-button="{
+        label: 'Creer Mon Espace',
+        loading: loading,
+      }"
       @submit="onSubmit"
     >
       <template #description>
