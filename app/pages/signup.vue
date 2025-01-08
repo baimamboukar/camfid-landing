@@ -8,6 +8,7 @@ useSeoMeta({
 });
 
 // Initialize Supabase client and router
+const signupEmail = useSignupEmail();
 const supabase = useSupabaseClient();
 const router = useRouter();
 const loading = ref(false);
@@ -19,6 +20,13 @@ const fields = [
     type: "text",
     label: "Noms",
     placeholder: "Entez votre nom complet",
+  },
+  // add date of birth field
+  {
+    name: "date_of_birth",
+    type: "date",
+    label: "Date de Naissance",
+    placeholder: "Entrez votre date de naissance",
   },
   {
     name: "email",
@@ -64,16 +72,21 @@ const validate = (state: any) => {
 // Handle form submission
 async function onSubmit(data: any) {
   try {
+    console.log(data);
     loading.value = true;
 
     // Sign up with Supabase
+    // Set email in state before redirecting
+    signupEmail.value = data.email;
     const { error: signUpError } = await supabase.auth.signUp({
       email: data.email,
       password: data.password,
       options: {
+        emailRedirectTo: "http://localhost:3000/confirm",
         data: {
           full_name: data.name,
           phone: data.phone,
+          date_of_birth: data.date_of_birth,
         },
       },
     });
@@ -81,12 +94,12 @@ async function onSubmit(data: any) {
     if (signUpError) throw signUpError;
 
     // Redirect to login page with success message
-    await navigateTo("/login", {
-      query: {
-        message:
-          "Compte créé avec succès. Veuillez vérifier votre email pour confirmer votre compte.",
-      },
-    });
+    // await navigateTo("/confirm", {
+    //   query: {
+    //     message:
+    //       "Compte créé avec succès. Veuillez vérifier votre email pour confirmer votre compte.",
+    //   },
+    // });
   } catch (error: any) {
     console.error("Error during signup:", error.message);
     // Handle specific error cases here
@@ -94,27 +107,6 @@ async function onSubmit(data: any) {
     loading.value = false;
   }
 }
-
-// Google Authentication
-async function signInWithGoogle() {
-  try {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-    });
-    if (error) throw error;
-  } catch (error: any) {
-    console.error("Google auth error:", error.message);
-  }
-}
-
-const providers = [
-  {
-    label: "Continuer avec Google",
-    icon: "i-simple-icons-google",
-    color: "white" as const,
-    click: signInWithGoogle,
-  },
-];
 </script>
 
 <template>
