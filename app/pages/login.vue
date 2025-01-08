@@ -48,7 +48,7 @@ async function onSubmit(data: any) {
     // Redirect to home page after successful login
     router.push("/");
   } catch (error: any) {
-    console.error(">>>>>> Auth Error <<<<<<", error.message);
+    // console.error(">>>>>> Auth Error <<<<<<", error.message);
   } finally {
     loading.value = false;
   }
