@@ -77,14 +77,35 @@ const decrementActions = () => {
     state.numberOfActions--;
   }
 };
-
-const showTerms = () => {
-  isTermsVisible.value = true;
-};
-
+// const { initializePayment } = usePayment();
+const { createInvestment } = useInvestment();
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  // Handle form submission
-  console.log(event.data);
+  try {
+    // 1. Create investment record
+    const investment = await createInvestment({
+      numberOfShares: state.numberOfActions,
+      amount_per_share: PRICE_PER_ACTION,
+      total_amount: totalPrice.value,
+      payment_method: "tranzak",
+      user_name: state.fullName,
+    });
+
+    // 2. Initialize payment and get redirect URL
+    const response = await $fetch("/api/payments/initialize", {
+      method: "POST",
+      body: {
+        amount: totalPrice.value,
+        investment_id: investment.id,
+      },
+    });
+
+    // 3. Redirect to Tranzak payment page
+    if (response.success) {
+      window.location.href = response.payment_url;
+    }
+  } catch (error) {
+    console.error("Investment submission failed:", error);
+  }
 }
 </script>
 
