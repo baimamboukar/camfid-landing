@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     redirectOptions: {
       login: "/login",
       callback: "/confirm",
-      include: ["/espace"],
+      include: ["/espace", "/invest-confirmation"],
       // exclude: [
       //   "/",
       //   "http://localhost:3000/",
