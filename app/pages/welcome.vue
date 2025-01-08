@@ -5,7 +5,7 @@ definePageMeta({
 });
 
 const router = useRouter();
-const countdown = ref(5);
+const countdown = ref(10);
 const signupEmail = useSignupEmail();
 
 onMounted(() => {
@@ -81,7 +81,7 @@ onMounted(() => {
       </div>
 
       <!-- Action Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4">
+      <div class="flex flex-col gap-4">
         <UButton
           color="primary"
           block
