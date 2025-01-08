@@ -76,8 +76,6 @@ async function onSubmit(data: any) {
     loading.value = true;
 
     // Sign up with Supabase
-    // Set email in state before redirecting
-    signupEmail.value = data.email;
     const { error: signUpError } = await supabase.auth.signUp({
       email: data.email,
       password: data.password,
@@ -92,14 +90,15 @@ async function onSubmit(data: any) {
     });
 
     if (signUpError) throw signUpError;
-
+    // Set email in state before redirecting
+    signupEmail.value = data.email;
     // Redirect to login page with success message
-    // await navigateTo("/confirm", {
-    //   query: {
-    //     message:
-    //       "Compte créé avec succès. Veuillez vérifier votre email pour confirmer votre compte.",
-    //   },
-    // });
+    await navigateTo("/confirm", {
+      query: {
+        message:
+          "Compte créé avec succès. Veuillez vérifier votre email pour confirmer votre compte.",
+      },
+    });
   } catch (error: any) {
     console.error("Error during signup:", error.message);
     // Handle specific error cases here
