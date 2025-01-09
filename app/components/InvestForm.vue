@@ -90,19 +90,21 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       user_name: state.fullName,
     });
 
-    // 2. Initialize payment and get redirect URL
-    const response = await $fetch("/api/payments/initialize", {
-      method: "POST",
-      body: {
-        amount: totalPrice.value,
-        investment_id: investment.id,
-      },
-    });
+    navigateTo("/invest-confirmation", { investmentId: investment.id });
 
-    // 3. Redirect to Tranzak payment page
-    if (response.success) {
-      window.location.href = response.payment_url;
-    }
+    // 2. Initialize payment and get redirect URL
+    // const response = await $fetch("/api/payments/initialize", {
+    //   method: "POST",
+    //   body: {
+    //     amount: totalPrice.value,
+    //     investment_id: investment.id,
+    //   },
+    // });
+
+    // // 3. Redirect to Tranzak payment page
+    // if (response.success) {
+    //   window.location.href = response.payment_url;
+    // }
   } catch (error) {
     console.error("Investment submission failed:", error);
   }
